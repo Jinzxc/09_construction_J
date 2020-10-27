@@ -15,5 +15,5 @@ struct mob *new_mob(char *nm, char *sp, int lvl) {
 }
 
 void reveal_mob(struct mob *mb) {
-    printf("%s, a level %d %s has been created.\n", mb->name, mb->level, mb->species);
+    printf("%s, a level %d %s, has been created.\n", mb->name, mb->level, mb->species);
 }

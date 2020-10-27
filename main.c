@@ -1,10 +1,14 @@
-#include "night.h"
 #include <stdlib.h>
+#include <time.h>
+
+#include "night.h"
 
 int main() {
-    struct mob *bob = new_mob("Bob", "dinosaur", 4);
-    struct mob *george = new_mob("George", "sturgeon", 37);
-    struct mob *victer = new_mob("Victer", "person", 100);
+    srand(time(NULL));
+
+    struct mob *bob = new_mob("Bob", "dinosaur", rand() % 100);
+    struct mob *george = new_mob("George", "sturgeon", rand() % 100);
+    struct mob *victer = new_mob("Victer", "person", rand() % 100 - 3);
 
     reveal_mob(bob);
     reveal_mob(george);
